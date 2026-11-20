@@ -1,0 +1,16 @@
+# Zadanie 10: obliczanie całkowitej wartości towarów w sklepie.
+# product_prices[i] to cena produktu o indeksie i.
+product_prices = [
+    2999.99, 149.99, 499.99, 89.99, 1199.99,
+    349.99, 189.99, 99.99, 249.99, 999.99
+]
+# product_quantities[i] to liczba sztuk tego samego produktu.
+product_quantities = [5, 20, 10, 15, 7, 12, 25, 18, 9, 4]
+
+total_value = 0.0
+
+# Łączymy ceny i ilości o tych samych indeksach.
+for i in range(len(product_prices)):
+    total_value += product_prices[i] * product_quantities[i]
+
+print(f"Total value of all goods: {total_value:.2f}")
